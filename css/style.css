@@ -36,7 +36,7 @@ a {
 }
 
 a:hover {
-    color: darken(var(--primary-color), 10%);
+    color: #e69500; /* Turuncunun biraz koyusu */
 }
 
 ul {
@@ -99,14 +99,14 @@ h3 { font-size: 1.4rem; }
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: var(--dark-color); /* Turuncu üzerine koyu renk daha okunaklı olabilir */
 }
-
 .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: #e69500; /* Turuncunun biraz koyusu */
      transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
 
 .btn-secondary {
      background-color: transparent;
@@ -116,7 +116,7 @@ h3 { font-size: 1.4rem; }
 
 .btn-secondary:hover {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: var(--dark-color);
 }
 
 /* Header & Navbar */
@@ -129,7 +129,7 @@ h3 { font-size: 1.4rem; }
     height: var(--header-height);
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #navbar {
@@ -137,6 +137,12 @@ h3 { font-size: 1.4rem; }
     justify-content: space-between;
     align-items: center;
     height: 100%;
+}
+
+#navbar .logo {
+    display: flex;
+    align-items: center;
+    padding-top: 10px; /* Üstten 10px boşluk ekler, ihtiyaca göre değeri artırabilirsiniz */
 }
 
 #navbar .logo img {
@@ -153,6 +159,7 @@ h3 { font-size: 1.4rem; }
 
 #navbar ul {
     display: flex;
+    
 }
 
 #navbar ul li {
@@ -298,6 +305,7 @@ h3 { font-size: 1.4rem; }
     padding: 20px;
     padding-top: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Tıklanabilir olduğunu belirtir */
 }
 
 .menu-item:hover {
@@ -430,6 +438,67 @@ h3 { font-size: 1.4rem; }
     margin-top: 0; /* İletişim alanı ile birleşik durması için */
 }
 
+/* ----- Modal Stilleri ----- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-modal {
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+/* Modal içindeki resmin boyutunu düzelt */
+#modal-img {
+    width: 100%;
+    max-height: 250px; /* Yüksekliği sınırla */
+    object-fit: cover; /* En-boy oranını koru ve alanı doldur */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#modal-price-list {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.price-note {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
 /* Animasyonlar (JavaScript ile tetiklenecek) */
 /* Başlangıç durumu (görünmez ve/veya kaymış) */
 .animate-on-scroll {
@@ -475,10 +544,10 @@ h3 { font-size: 1.4rem; }
     }
      .contact-info {
         margin-bottom: 30px;
-        text-align: left; /* İletişim bilgilerini sola hizala */
+        text-align: center; /* İletişim bilgilerini ortala */
     }
      .contact-info p {
-         justify-content: center; /* Mobil görünümde ortala */
+         justify-content: center; /* İkon ve metni ortala */
      }
     .slide-in-left, .slide-in-right { /* Yan kayma animasyonunu düzelt */
         transform: translateY(30px);
@@ -532,4 +601,16 @@ h3 { font-size: 1.4rem; }
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Galeriyi küçült */
     }
+
+    /* Modal mobil uyumu */
+     .modal-content {
+         padding: 20px;
+         max-height: 85vh;
+     }
+      #modal-title {
+        font-size: 1.5rem;
+     }
+     #modal-img {
+         max-height: 200px;
+     }
 }
