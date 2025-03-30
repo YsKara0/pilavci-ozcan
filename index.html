@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pilavcı Özcan - Düğün, nişan ve özel günleriniz için toplu pilav siparişi. Lezzetli menülerimizi keşfedin.">
+    <meta name="keywords" content="pilavcı, pilav, toplu yemek, düğün yemeği, nişan yemeği, etkinlik yemeği, Özcan, tavuklu pilav, nohutlu pilav">
+    <title>Pilavcı Özcan - Lezzetli Pilav Menüleri & Etkinlik Hizmetleri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- İsteğe bağlı: Font Awesome ikonları için -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <!-- İsteğe bağlı: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Alanı -->
+    <header id="header">
+        <div class="container">
+            <nav id="navbar">
+                <a href="#hero" class="logo">
+                    <img src="images/logo.png" alt="Pilavcı Özcan Logo">
+                    <!-- Logoyu metin olarak da ekleyebiliriz: -->
+                    <!-- <h1>PİLAVCI ÖZCAN</h1> -->
+                </a>
+                <ul>
+                    <li><a href="#hero">Ana Sayfa</a></li>
+                    <li><a href="#menus">Menüler</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+                <!-- Mobil Menü Butonu (JavaScript ile aktifleşecek) -->
+                <button id="menu-btn" class="hamburger" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobil Menü (JavaScript ile açılıp kapanacak) -->
+    <div id="mobile-menu" class="mobile-nav">
+        <ul>
+            <li><a href="#hero" class="mobile-nav-link">Ana Sayfa</a></li>
+            <li><a href="#menus" class="mobile-nav-link">Menüler</a></li>
+            <li><a href="#about" class="mobile-nav-link">Hakkımızda</a></li>
+            <li><a href="#gallery" class="mobile-nav-link">Galeri</a></li>
+            <li><a href="#contact" class="mobile-nav-link">İletişim</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Hero (Ana Giriş) Alanı -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="animate-on-scroll fade-in-down">Özel Günlerinize Lezzet Katıyoruz</h1>
+            <p class="animate-on-scroll fade-in-up delay-1">Düğün, nişan ve tüm etkinlikleriniz için taze ve lezzetli pilav menüleri.</p>
+            <a href="#menus" class="btn btn-primary animate-on-scroll fade-in-up delay-2">Menülerimizi Keşfedin</a>
+        </div>
+    </section>
+
+    <!-- Menüler Alanı -->
+    <section id="menus" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Menülerimiz</h2>
+            <p class="section-subtitle animate-on-scroll fade-in delay-1">Etkinlikleriniz için özenle hazırladığımız seçenekler</p>
+            <div class="menu-grid">
+                <!-- Menü Öğesi 1 -->
+                <div class="menu-item animate-on-scroll fade-in-up delay-2">
+                    <img src="images/menu1.jpg" alt="Tavuklu Pilav Menüsü">
+                    <h3>Klasik Tavuklu Pilav Menüsü</h3>
+                    <p>Tereyağlı pirinç pilavı, didilmiş tavuk göğsü, yanında ayran ve salata.</p>
+                    <a href="#contact" class="btn btn-secondary">Teklif Al</a>
+                </div>
+                <!-- Menü Öğesi 2 -->
+                <div class="menu-item animate-on-scroll fade-in-up delay-3">
+                    <img src="images/menu2.jpg" alt="Nohutlu Pilav Menüsü">
+                    <h3>Nohutlu Pilav Menüsü</h3>
+                    <p>Tereyağlı pirinç pilavı, haşlanmış nohut, yanında turşu ve içecek.</p>
+                    <a href="#contact" class="btn btn-secondary">Teklif Al</a>
+                </div>
+                <div class="menu-item animate-on-scroll fade-in-up delay-3">
+                    <img src="images/menu2.jpg" alt="Nohutlu Pilav Menüsü">
+                    <h3>Nohutlu Pilav Menüsü</h3>
+                    <p>Tereyağlı pirinç pilavı, haşlanmış nohut, yanında turşu ve içecek.</p>
+                    <a href="#contact" class="btn btn-secondary">Teklif Al</a>
+                </div>
+                <div class="menu-item animate-on-scroll fade-in-up delay-3">
+                    <img src="images/menu2.jpg" alt="Nohutlu Pilav Menüsü">
+                    <h3>Nohutlu Pilav Menüsü</h3>
+                    <p>Tereyağlı pirinç pilavı, haşlanmış nohut, yanında turşu ve içecek.</p>
+                    <a href="#contact" class="btn btn-secondary">Teklif Al</a>
+                </div>
+                <div class="menu-item animate-on-scroll fade-in-up delay-3">
+                    <img src="images/menu2.jpg" alt="Nohutlu Pilav Menüsü">
+                    <h3>Nohutlu Pilav Menüsü</h3>
+                    <p>Tereyağlı pirinç pilavı, haşlanmış nohut, yanında turşu ve içecek.</p>
+                    <a href="#contact" class="btn btn-secondary">Teklif Al</a>
+                </div>
+                <!-- Diğer Menü Öğeleri Buraya Eklenebilir -->
+                 <div class="menu-item animate-on-scroll fade-in-up delay-4">
+                    <img src="images/menu3.jpg" alt="Karışık Pilav Menüsü"> <!-- Varsayılan resim -->
+                    <h3>Karışık Özel Menü</h3>
+                    <p>İsteğe göre tavuklu, nohutlu veya sade pilav, ek garnitürler ve tatlı seçeneği.</p>
+                    <a href="#contact" class="btn btn-secondary">Teklif Al</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Alanı -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+             <h2 class="section-title animate-on-scroll fade-in">Biz Kimiz?</h2>
+             <div class="about-content">
+                 <div class="about-text animate-on-scroll slide-in-left">
+                    <h3>Pilavcı Özcan Hikayesi</h3>
+                    <p>Yılların tecrübesiyle, en kaliteli malzemeleri kullanarak geleneksel pilav lezzetini modern sunumlarla birleştiriyoruz. Amacımız, özel günlerinizde misafirlerinize unutulmaz tatlar sunmak.</p>
+                    <p>Hijyen ve tazelik bizim için önceliklidir. Tüm menülerimiz günlük olarak hazırlanır ve etkinliklerinize sıcak ve zamanında teslim edilir.</p>
+                 </div>
+                 <div class="about-image animate-on-scroll slide-in-right">
+                     <img src="images/about-image.jpg" alt="Pilavcı Özcan Dükkan veya Ekip"> <!-- Dükkan veya ekip resmi -->
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Galeri Alanı -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Etkinliklerimizden Kareler</h2>
+             <p class="section-subtitle animate-on-scroll fade-in delay-1">Mutlu anlarınıza lezzet kattığımız anılar</p>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll zoom-in">
+                    <img src="images/event1.jpg" alt="Düğün Pilav Servisi">
+                </div>
+                <div class="gallery-item animate-on-scroll zoom-in delay-1">
+                    <img src="images/event2.jpg" alt="Nişan Pilav İkramı">
+                </div>
+                <div class="gallery-item animate-on-scroll zoom-in delay-2">
+                    <img src="images/event3.jpg" alt="Mevlüt Pilavı">
+                </div>
+                 <div class="gallery-item animate-on-scroll zoom-in delay-3">
+                    <img src="images/event4.jpg" alt="Açılış Organizasyonu Pilav">
+                </div>
+                 <!-- Daha fazla galeri öğesi eklenebilir -->
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Alanı -->
+    <section id="contact" class="section-padding bg-dark">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Bize Ulaşın</h2>
+            <p class="section-subtitle animate-on-scroll fade-in delay-1">Menülerimiz ve hizmetlerimiz hakkında bilgi almak için iletişime geçin.</p>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll slide-in-left">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Adres: [Buraya Dükkan Adresinizi Yazın]</p>
+                    <p><i class="fas fa-phone"></i> Telefon: <a href="tel:+90XXXXXXXXXX">[Telefon Numaranız]</a></p>
+                    <p><i class="fas fa-envelope"></i> E-posta: <a href="mailto:info@pilavciozcan.com">info@pilavciozcan.com</a></p>
+                    <p><i class="fas fa-clock"></i> Çalışma Saatleri: [Çalışma Saatleriniz]</p>
+                    <!-- Sosyal Medya Linkleri Eklenebilir -->
+                    <!-- <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div> -->
+                </div>
+                <div class="contact-form animate-on-scroll slide-in-right">
+                    <h3>Mesaj Gönderin</h3>
+                    <form id="main-contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                         <div class="form-group">
+                            <input type="text" name="subject" placeholder="Konu" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
+                    <p id="form-status" class="form-message"></p> <!-- Form gönderim durumu mesajı -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Alanı -->
+    <footer id="footer">
+        <div class="container">
+            <p>© 2024 Pilavcı Özcan. Tüm Hakları Saklıdır.</p>
+            <!-- İsteğe Bağlı: Siteyi yapan kişi bilgisi -->
+            <!-- <p>Tasarım & Kodlama: [Adınız]</p> -->
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
