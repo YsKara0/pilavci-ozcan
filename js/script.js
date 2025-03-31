@@ -174,6 +174,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.textContent = '200 kişi: ' + this.getAttribute('data-price-200');
                 priceList.appendChild(li);
             }
+            if(this.hasAttribute('data-price-500')) {
+                const li = document.createElement('li');
+                li.textContent = '500 kişi: ' + this.getAttribute('data-price-500');
+                priceList.appendChild(li);
+            }
+            if(this.hasAttribute('data-price-1000')) {
+                const li = document.createElement('li');
+                li.textContent = '1000 kişi: ' + this.getAttribute('data-price-1000');
+                priceList.appendChild(li);
+            }
             
             // Modalı göster
             modal.style.display = 'block';
