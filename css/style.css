@@ -1,3 +1,4 @@
+/* et döner kavurmalı normal tavuklu  */
 /* Genel Ayarlar ve Resetleme */
 :root {
     --primary-color: #FFA500; /* Logo turuncusu - Gerekirse Hex kodunu değiştirin */
@@ -294,18 +295,19 @@ h3 { font-size: 1.4rem; }
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Duyarlı grid */
     gap: 30px; /* Öğeler arası boşluk */
+    align-items: stretch; /* Kartların yüksekliklerini eşitlemek için eklendi */
 }
-
 .menu-item {
     background: var(--light-color);
     border-radius: 8px;
     overflow: hidden; /* Resmin köşelerini yuvarlatmak için */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
-    padding-top: 0;
+    padding: 10px 20px 20px 20px; /* Padding-top kaldırıldı, resim tam üste yaslanacak */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer; /* Tıklanabilir olduğunu belirtir */
+    display: flex; /* İçerikleri daha iyi kontrol etmek için eklendi */
+    flex-direction: column; /* İçerikleri dikey sırala */
 }
 
 .menu-item:hover {
@@ -314,20 +316,32 @@ h3 { font-size: 1.4rem; }
 }
 
 .menu-item img {
-    width: 100%;
-    height: 200px; /* Sabit resim yüksekliği */
-    object-fit: cover; /* Resmin orantısını koruyarak doldur */
-    margin-bottom: 15px;
+    width: 100%;       /* Genişliği %100 yapıldı (kartın tamamını kaplasın) */
+    height: 200px;      /* Sabit yükseklik verildi (max-height yerine height) */
+    object-fit: cover; /* Resmin orantısını koruyarak alanı kapla (kırpma olabilir) */
+    display: block;
+    margin-bottom: 15px; /* Resim ile başlık arası boşluk */
+    /* margin: 0 auto; kaldırıldı, width: 100% ile gereksiz */
 }
 
 .menu-item h3 {
     color: var(--primary-color);
     margin-bottom: 10px;
+    min-height: 50px; /* Yaklaşık 2 satır başlık + boşluk için minimum yükseklik (ayarlayabilirsiniz) */
+    /* Başlığın dikeyde ortalanması istenirse (opsiyonel): */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .menu-item p {
     margin-bottom: 15px;
-    min-height: 60px; /* Açıklama alanlarının yüksekliğini eşitlemeye yardımcı olur */
+    /* min-height: 60px; kaldırılabilir veya ayarlanabilir, flex-grow daha esnek olabilir */
+    flex-grow: 1; /* Açıklama alanının kalan boşluğu doldurmasını sağlar (butonları hizalamak için) */
+}
+/* Butonun hep en altta kalması için (opsiyonel ama önerilir) */
+.menu-item .btn {
+    margin-top: auto; /* Butonu kartın en altına iter */
 }
 
 /* Hakkımızda Alanı */
@@ -481,10 +495,14 @@ h3 { font-size: 1.4rem; }
 /* Modal içindeki resmin boyutunu düzelt */
 #modal-img {
     width: 100%;
-    max-height: 250px; /* Yüksekliği sınırla */
-    object-fit: cover; /* En-boy oranını koru ve alanı doldur */
-    border-radius: 5px;
+    max-width: 500px;
+    max-height: 300px;
+    object-fit: scale-down; /* Resim container ile karşılaştırılır; büyükse küçülür. */
+    border-radius: 5px;  
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #modal-price-list {
@@ -492,7 +510,7 @@ h3 { font-size: 1.4rem; }
     margin: 10px 0;
 }
 
-.price-note {
+price-note {
     font-style: italic;
     color: #666;
     font-size: 0.9em;
