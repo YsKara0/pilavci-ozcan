@@ -90,6 +90,9 @@
         }
     }
     </script>
+
+    <!-- EmailJS Script'ini kaldırın -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
 </head>
 <body>
 
@@ -315,14 +318,21 @@
                 </div>
                 <div class="contact-form animate-on-scroll slide-in-right">
                     <h3>Mesaj Gönderin</h3>
-                    <form id="main-contact-form">
+                    <form id="main-contact-form" action="https://formspree.io/f/mvgrdlkj" method="POST">
+                        <!-- Formspree için gizli alanlar -->
+                        <input type="hidden" name="_subject" value="Pilavcı Özcan Web Sitesi Mesajı">
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Adınız Soyadınız" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                            <input type="email" name="_replyto" placeholder="E-posta Adresiniz" required>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Telefon Numaranız" pattern="[0-9\s\+\-\(\)]{10,15}" required>
+                        </div>
+                        <div class="form-group">
                             <input type="text" name="subject" placeholder="Konu" required>
                         </div>
                         <div class="form-group">
@@ -330,7 +340,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Gönder</button>
                     </form>
-                    <p id="form-status" class="form-message"></p> <!-- Form gönderim durumu mesajı -->
+                    <p id="form-status" class="form-message"></p>
                 </div>
             </div>
         </div>
